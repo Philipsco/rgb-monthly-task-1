@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Rolling Glory Bootcamp</title>
+    <link rel="stylesheet" href="./../css/index.css">
+    <link rel="icon" sizes="192x192" href="../assets/img/logo.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <header class="main-header fixed top-0 left-0 w-full text-white bg-black bg-opacity-90">
+        <div class="container">
+            <div class="flex justify-between items-center py-3">
+                <img  src="../assets/img/logo-header.svg" alt="Rolling Glory's Logo">
+                <nav>
+                    <ul class="flex items-center font-light">
+                        <li>
+                            <a href="../index.html" title="Home">Home</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container py-20">
+            <form id="filterSearch" class="relative grid grid-cols-[1fr,.2fr]">
+                <input class="border-2 border-[#C6D0D8] p-4 w-full" type="text" placeholder="Search projects..." name="searchBox" value="" autocomplete="off"/>
+                <button type="submit" class="right-0 h-full px-5 border border-transparent bg-black text-white">
+                    Search
+                </button>
+            </form>
+            <div></div>
+            <div id="filter-tab" class="swiper mySwipper">
+                <select class="swiper-wrapper" id="select" onchange="changeData()">
+                    <option value="1">All</option>
+                    <option value="2">Mobile</option>
+                    <option value="3">Website</option>
+                    <option value="4">Game</option>
+                </select>
+                <!-- If we need navigation buttons -->
+                <!-- <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div> -->
+            </div>
+
+            <section class="section relative w-full bg-cover bg-no-repeat bg-center origin-center" >
+                <div class="container my-12 mx-auto px-4 md:px-12">
+                    <div class="flex flex-wrap -mx-1 lg:-mx-4" id="template">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="bg-black bg-opacity-90 text-white">
+        <div class="container divide-y divide-grey Shade text-center lg:text-left">
+            <div class="flex flex-col lg:flex-row justify-between py-1">
+                <div class="lg:pr-5 mb-10 lg:mb-0">
+                    <a href="https://rollingglory.com" title="Rolling Glory">
+                        <img class="mb-5 lg:mx-0" src="../assets/img/logo-header.svg" alt="Rolling Glory's Logo">                </a>
+                </div>
+                <div class="font-thin text-md">
+                    <p class="mb-1">
+                        Address
+                    </p>
+                    <p>
+                        <span class="block">Jl. Cisitu Indah 2 No.2,</span>
+                        <span class="block">Dago, Kecamatan Coblong, Kota Bandung, Jawa Barat 40135</span>
+                    </p>
+                </div>
+            </div>
+            <div class="py-7 text-sm font-thin text-center">
+                &copy; Rolling Glory. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../js/index.js"></script>
+</body>
+</html>
